@@ -78,6 +78,8 @@ python scripts/checks/verify_manifest.py
 
 GitHub 本身不发放 DOI。将本仓库连接到 Zenodo（Settings → Webhooks → Zenodo，打开本仓库的开关）后，发布 release 即会自动归档并生成 DOI。`CITATION.cff` 与 `.zenodo.json` 已按归档所需元数据填写完毕。
 
+当前归档版本：tag `repro-20261015-r7`，对应 release [repro-20261015-r7](https://github.com/xionglovetian/matched-exposure-coseismic-landslide-transfer/releases/tag/repro-20261015-r7)。
+
 **许可**
 
 代码与文档采用 MIT 许可；影像数据与派生标注仍受其原始许可约束，详见 `DATA_LICENSES.md`。
@@ -275,6 +277,8 @@ Webhooks -> Zenodo, enable the repository toggle), publish a GitHub release, and
 Zenodo archives that release and issues a DOI. `.zenodo.json` and `CITATION.cff`
 are already in place with the metadata that archive needs; only the version DOI
 has to be filled in after the release.
+
+The current archived version is tag `repro-20261015-r7`, published as [release repro-20261015-r7](https://github.com/xionglovetian/matched-exposure-coseismic-landslide-transfer/releases/tag/repro-20261015-r7).
 
 ### Licence
 
