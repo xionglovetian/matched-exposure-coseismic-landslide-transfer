@@ -1,4 +1,94 @@
-# Matched-Exposure Coseismic Landslide Transfer
+# Matched-Exposure Coseismic Landslide Transfer · 匹配曝光的同震滑坡跨事件迁移基准
+
+[中文说明](#中文说明) | [English](#english)
+
+Reproducibility package for a retrospective, region-held-out benchmark of
+coseismic landslide segmentation under cross-event domain shift.
+同震滑坡跨事件迁移的匹配曝光基准可复现性包。
+
+**中文**：本页上半部分为中文说明，下半部分为英文说明。内容一致，均以英文正文中的文件路径与命令为准。
+**English**: this page contains a Chinese section followed by the full English
+documentation. File paths and commands are identical in both.
+
+---
+## 中文说明
+
+**本仓库是什么**
+
+本仓库是一篇投稿 *Geomatics, Natural Hazards and Risk* 的研究论文的可复现性包。论文题目为 Region-dependent transferability of coseismic landslide mapping models between earthquakes: a matched-exposure assessment for rapid post-earthquake inventorying（地震间同震滑坡制图模型的区域依赖迁移性：面向震后快速编目的匹配曝光评估）。
+
+仓库提供实验代码、冻结的数据清单与划分、机器可读指标、自助与区间统计程序，以及审计报告。仓库**不包含**稿件正文、影像数据、切图、模型权重，以及任何受原始数据许可限制的文件。
+
+本仓库取代此前的 `coseismic-landslide-transfer-benchmark`（双骨干快照）。旧仓的完整历史已保留为本仓的普通 Git 历史，因此 `7b143df` 在本仓仍可直接解析。
+
+**核心结论与预注册判定**
+
+- 匹配曝光对照在四个骨干上全部提高 MCC：ResUNet `+0.1573`、Bottleneck-LiteASK `+0.0990`、SegFormer-B0 `+0.1047`、DeepLabV3+ `+0.1333`；两族区间均排除零、三种子同号，预注册门槛（≥3/4）判定为 **PASS**。
+- Macro IoU 只在 3/4 骨干上成立：ResUNet `+0.0773`、SegFormer-B0 `+0.0591`、DeepLabV3+ `+0.0610`；Bottleneck-LiteASK `+0.0456`（区间 `[-0.0056, +0.0968]`）是稿件中已如实标注的唯一例外。
+- 校准诊断（E2）：source-only 臂成立，源域高置信错误率低于三个目标区且区间不相交；pooled 臂不成立，Palu 上 pooled ResUNet 的 0.83% 反而低于其源域的 0.94%。
+- 全面瓦片筛查端点（E1）未执行：预注册的 E1 需要零前景瓦片，而官方分发的区域归档本身已做前景过滤，这类瓦片从未发布。仓库只报告了含前景瓦片内部像素级的背景虚警诊断，并明确声明它不能替代 E1。
+- 其他主结论：源域验证不能预测新事件表现；置信度在 source-only 配置下不能作为域外告警；分辨率增益主要是权重尺度伪影。
+
+**目录导航**
+
+| 路径 | 内容 |
+|---|---|
+| `scripts/` | 训练、评测、自助与审计脚本（`checks/` 为校验工具，`setup/` 为环境与数据准备） |
+| `configs/` | 每个 run 的 `config.json`/`history.csv` 归档，以及 `RUN_INDEX.csv` 运行清单 |
+| `data_manifests/` | 冻结的清单、划分与目标区空间索引 |
+| `metrics/` | 机器可读结果（原始与汇总） |
+| `reports/selected/` | 冻结协议、审计报告与结果摘要 |
+| `reports/revision_20261015/` | 修订期预注册（Supplementary Note S1）与 E1/E2/E3 结果报告 |
+| `logs/e3_runs/` | 修订期 18 个 run 的运行日志 |
+| `figures/` | 论文图件生成脚本 |
+
+**仅用已入库指标重算修订期表格**（不需要影像，也不需要权重）
+
+```powershell
+python scripts/q2_x3_seed_stratified_reanalysis.py `
+  --tile-root metrics/q2_x3_tiles `
+  --spatial-index data_manifests/target_spatial_index.csv `
+  --output-dir metrics/q2_x3_seed_stratified_bootstrap --draws 10000
+
+python scripts/q2_x3_target_macro_component_bootstrap.py `
+  --tile-root metrics/q2_x3_tiles `
+  --spatial-index data_manifests/target_spatial_index.csv `
+  --output metrics/q2_x3_bootstrap/x3_target_macro_component.csv --draws 10000
+
+python scripts/report_e3_four_backbone.py
+python scripts/report_e2_calibration.py
+python scripts/report_e2_frequency_bins.py
+python scripts/e1_partial_background_false_alarm.py
+```
+
+两个自助脚本都是确定性的：重跑结果与已提交的 CSV **逐字节一致**；报告生成器同样逐字节还原 `reports/revision_20261015/` 下的 Markdown 报告。
+
+**发布包校验**
+
+```powershell
+python scripts/checks/validate_release.py
+python scripts/checks/verify_manifest.py
+```
+
+**数据与权重**
+
+原始影像不随仓库分发，请按 `INPUTS.md` 与 `DATA_LICENSES.md` 从原始提供方获取并遵守其许可条款。权重不入库：`CHECKPOINT_INDEX.csv` 记录了每个 run 的检查点及大小；修订期 18 个 run 归档的是分析实际使用的权重（12 个对照 run 为 `final_model.pth`，6 个 source-only 初始化 run 为 `best_model.pth`），中间 step 检查点未保留。
+
+**归档与 DOI**
+
+GitHub 本身不发放 DOI。将本仓库连接到 Zenodo（Settings → Webhooks → Zenodo，打开本仓库的开关）后，发布 release 即会自动归档并生成 DOI。`CITATION.cff` 与 `.zenodo.json` 已按归档所需元数据填写完毕。
+
+**许可**
+
+代码与文档采用 MIT 许可；影像数据与派生标注仍受其原始许可约束，详见 `DATA_LICENSES.md`。
+
+**仓库地址**
+
+https://github.com/xionglovetian/matched-exposure-coseismic-landslide-transfer
+
+---
+
+## English
 
 Reproducibility package for the manuscript
 
@@ -22,7 +112,7 @@ the earlier two-architecture snapshot. The full two-architecture history is
 preserved here as ordinary Git history, so that snapshot is still resolvable at
 commit `7b143df`.
 
-## Headline claims and where the numbers live
+### Headline claims and where the numbers live
 
 | Claim in the manuscript | Authoritative packaged file |
 |---|---|
@@ -39,7 +129,7 @@ commit `7b143df`.
 `PROVENANCE.md` maps every manuscript-level number to its packaged source and
 records which files are superseded.
 
-## Which number is authoritative
+### Which number is authoritative
 
 The headline exposure-matched macro IoU effect is the q2_x3 fixed-three-region
 value with the seed-stratified interval taking precedence for architecture-level
@@ -51,7 +141,7 @@ tables. The current authoritative sources are
 `reports/selected/e1_exposure_matched_contrasts.csv` and
 `metrics/q2_x3_seed_stratified_bootstrap/q2_x3_seed_stratified_t_interval.csv`.
 
-## Revision-phase experiments (2026-10-15)
+### Revision-phase experiments (2026-10-15)
 
 Three additional experiments were pre-registered before they were run; the plan
 is frozen in `reports/revision_20261015/PRE_REGISTRATION_S1.md`.
@@ -81,7 +171,7 @@ is frozen in `reports/revision_20261015/PRE_REGISTRATION_S1.md`.
   `metrics/e1_partial_background_false_alarm.csv`); it is not a substitute for
   E1.
 
-## Repository layout
+### Repository layout
 
 ```text
 src/                       core datasets, metrics and model definitions
@@ -98,7 +188,7 @@ logs/e3_runs/              curated run logs for the revision-phase experiment
 figures/                   publication figure generators
 ```
 
-## Quick validation
+### Quick validation
 
 Python 3.10 is recommended. The release validator uses only the standard
 library.
@@ -110,7 +200,7 @@ python scripts/checks/validate_release.py
 python scripts/checks/verify_manifest.py
 ```
 
-## Recomputing the revision-phase tables from the packaged metrics
+### Recomputing the revision-phase tables from the packaged metrics
 
 These four commands need no imagery and no checkpoints; they read only what is
 committed here.
@@ -136,7 +226,7 @@ Both bootstrap scripts are deterministic: rerunning them reproduces the
 committed CSVs byte for byte. The report generators likewise regenerate the
 Markdown summaries under `reports/revision_20261015/` exactly.
 
-## Data and checkpoints
+### Data and checkpoints
 
 The raw image data are not redistributed. Obtain each source from its original
 provider and comply with the terms recorded in `DATA_LICENSES.md`; `INPUTS.md`
@@ -154,7 +244,7 @@ Intermediate step checkpoints of those runs were not retained. The code can
 retrain every packaged configuration, and a checkpoint release should be
 archived separately with an explicit licence and a persistent identifier.
 
-## Reproduction status
+### Reproduction status
 
 Two levels of reproduction are supported:
 
@@ -178,7 +268,7 @@ four-backbone results. The remaining multi-day queues are executable from the
 pinned data and configurations but must still complete on the target machine
 before the whole study is called independently reproduced.
 
-## Archiving and DOI
+### Archiving and DOI
 
 GitHub alone does not mint DOIs. Connect this repository to Zenodo (Settings ->
 Webhooks -> Zenodo, enable the repository toggle), publish a GitHub release, and
@@ -186,12 +276,12 @@ Zenodo archives that release and issues a DOI. `.zenodo.json` and `CITATION.cff`
 are already in place with the metadata that archive needs; only the version DOI
 has to be filled in after the release.
 
-## Licence
+### Licence
 
 Code and documentation in this repository are released under the MIT Licence.
 Image data and derived annotations remain governed by their original licences;
 see `DATA_LICENSES.md`.
 
-## Repository URL
+### Repository URL
 
 https://github.com/xionglovetian/matched-exposure-coseismic-landslide-transfer
