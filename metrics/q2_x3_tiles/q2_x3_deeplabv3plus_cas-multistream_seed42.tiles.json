@@ -1,0 +1,18 @@
+{
+  "model": "DeepLabV3Plus",
+  "checkpoint": "/root/autodl-tmp/landslide_unet_project/outputs/q2_x3_deeplabv3plus_cas-multistream_seed42/final_model.pth",
+  "run_id": "q2_x3_deeplabv3plus_cas-multistream_seed42",
+  "regime": "cas-multistream",
+  "role": "placebo",
+  "seed": 42,
+  "step": 1120,
+  "regions": [
+    "hokkaido_iburi_tobu",
+    "lombok",
+    "palu"
+  ],
+  "threshold": 0.5,
+  "rows": 2737,
+  "output": "reports/q2_x3_tiles/q2_x3_deeplabv3plus_cas-multistream_seed42.tiles.csv",
+  "elapsed_seconds": 8.881083488464355
+}

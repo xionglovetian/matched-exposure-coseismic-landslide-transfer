@@ -9,8 +9,11 @@ env/
 data/
 checkpoints/
 outputs/
-logs/
 runs/
+
+# Only the curated revision-phase run logs are tracked.
+logs/*
+!logs/e3_runs/
 
 *.pth
 *.pt

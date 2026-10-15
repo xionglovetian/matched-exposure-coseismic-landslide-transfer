@@ -1,0 +1,29 @@
+{
+  "title": "Matched-exposure coseismic landslide transfer benchmark",
+  "upload_type": "software",
+  "description": "Experiment code, frozen data manifests and splits, machine-readable metrics, bootstrap and interval routines, and audit reports for a retrospective, region-held-out benchmark of coseismic landslide segmentation under cross-event domain shift. The archive covers the two-architecture matched-exposure benchmark, the four-backbone replication of the matched-exposure contrast, the multi-seed calibration diagnostics, and the tile-level background false-alarm diagnostic. Image data and derived annotations are not redistributed and remain governed by their original licences.",
+  "creators": [
+    {"name": "Xiong, Luoyang", "affiliation": "University of Emergency Management, Sanhe 065201, Hebei, China"},
+    {"name": "Meng, Juan", "affiliation": "University of Emergency Management, Sanhe 065201, Hebei, China"}
+  ],
+  "contributors": [],
+  "license": "MIT",
+  "access_right": "open",
+  "keywords": [
+    "coseismic landslides",
+    "cross-event transfer",
+    "source pooling",
+    "matched exposure",
+    "landslide segmentation",
+    "model transferability",
+    "benchmark"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "references",
+      "identifier": "https://github.com/xionglovetian/coseismic-landslide-transfer-benchmark",
+      "resource_type": "software"
+    }
+  ],
+  "notes": "This record archives a tagged release of the repository. The tag name is recorded in the version field of the corresponding release."
+}

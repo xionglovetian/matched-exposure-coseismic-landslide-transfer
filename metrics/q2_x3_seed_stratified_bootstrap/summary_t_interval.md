@@ -14,3 +14,13 @@ Regions are fixed to Hokkaido, Lombok and Palu. Each seed effect is the unweight
 | Bottleneck-LiteASK | mcc | +0.0990 | 0.0302 | [+0.0240, +0.1740] |
 | Bottleneck-LiteASK | precision | +0.1182 | 0.0406 | [+0.0174, +0.2190] |
 | Bottleneck-LiteASK | recall | +0.0549 | 0.0215 | [+0.0016, +0.1082] |
+| SegFormer-B0 | iou | +0.0591 | 0.0062 | [+0.0437, +0.0745] |
+| SegFormer-B0 | balanced_iou | +0.0360 | 0.0028 | [+0.0291, +0.0429] |
+| SegFormer-B0 | mcc | +0.1047 | 0.0091 | [+0.0821, +0.1274] |
+| SegFormer-B0 | precision | +0.1318 | 0.0035 | [+0.1232, +0.1405] |
+| SegFormer-B0 | recall | +0.0757 | 0.0170 | [+0.0336, +0.1179] |
+| DeepLabV3+ | iou | +0.0610 | 0.0127 | [+0.0295, +0.0926] |
+| DeepLabV3+ | balanced_iou | +0.0471 | 0.0090 | [+0.0249, +0.0694] |
+| DeepLabV3+ | mcc | +0.1333 | 0.0203 | [+0.0829, +0.1836] |
+| DeepLabV3+ | precision | +0.1511 | 0.0115 | [+0.1226, +0.1796] |
+| DeepLabV3+ | recall | +0.0982 | 0.0354 | [+0.0103, +0.1860] |

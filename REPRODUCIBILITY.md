@@ -143,3 +143,72 @@ represented as independently rerun in this repository until a clean-machine
 execution of `FULL_REPRODUCTION.md` completes. Full reproduction requires the
 licensed CAS data and approximately 20 GiB of Q2 checkpoints or the compute
 time needed to regenerate them.
+
+## 9. Revision-phase experiments (2026-10-15)
+
+Everything below is regenerated from packaged files only; no imagery and no
+checkpoints are needed.
+
+```powershell
+python scripts/q2_x3_seed_stratified_reanalysis.py `
+  --tile-root metrics/q2_x3_tiles `
+  --spatial-index data_manifests/target_spatial_index.csv `
+  --output-dir metrics/q2_x3_seed_stratified_bootstrap --draws 10000
+
+python scripts/q2_x3_target_macro_component_bootstrap.py `
+  --tile-root metrics/q2_x3_tiles `
+  --spatial-index data_manifests/target_spatial_index.csv `
+  --output metrics/q2_x3_bootstrap/x3_target_macro_component.csv --draws 10000
+
+python scripts/report_e3_four_backbone.py
+python scripts/report_e2_calibration.py
+python scripts/report_e2_frequency_bins.py
+python scripts/e1_partial_background_false_alarm.py
+```
+
+Both bootstrap scripts are deterministic. Rerunning them reproduces the
+committed CSVs byte for byte, and the report generators reproduce the Markdown
+summaries under `reports/revision_20261015/` exactly. This was verified against
+the committed files before this release.
+
+The revision phase adds eighteen trained runs:
+
+```bash
+LANDSLIDE_ROOT=/path/to/landslide_unet_project ./scripts/run_e3_four_backbone_queue.sh all
+```
+
+The queue is restartable and skips completed runs. It needs the same licensed
+data as `FULL_REPRODUCTION.md`. Six runs are source-only source-domain
+initialisations for SegFormer-B0 and DeepLabV3+; twelve are matched-exposure
+contrast runs for those two backbones.
+
+### Environment equivalence
+
+The eighteen runs were produced on a rented CUDA host with an independently
+built virtual environment (see `scripts/setup/setup_e3_cloud_env.sh`). Before
+the queue was launched, ResUNet / pooled / seed 42 was retrained end to end for
+all 1,120 steps on that host and compared against the local record. The four
+logged checkpoints matched bitwise on `train_loss`, `lr`, `source_val_iou` and
+`source_val_dice`, with terminal source-validation IoU `0.518395166665147`. That
+check is what licenses treating the new runs as directly comparable to the
+eighteen original ones.
+
+### Model-level prerequisites for E2
+
+The calibration sweeps re-evaluate the packaged checkpoints:
+
+```powershell
+python scripts/e2_high_confidence_error_sweep.py --project-root $env:LANDSLIDE_PROJECT_ROOT
+python scripts/e2_frequency_bin_sweep.py --project-root $env:LANDSLIDE_PROJECT_ROOT
+```
+
+Both write into `metrics/calibration_e2/`. They require the matched-exposure
+checkpoints, that is, either the weights or the compute needed to retrain them.
+
+### Known gap
+
+`reports/requirements-lock.txt` of the original experiment root did not pin
+`segmentation-models-pytorch` or `opencv-python`. The repository-level
+`requirements.txt` does pin both (`segmentation-models-pytorch==0.5.0`,
+`opencv-python-headless==5.0.0.93`), so use `requirements.txt` for a clean
+environment.

@@ -1,0 +1,32 @@
+{
+  "regime": "cas-multistream",
+  "seed": 777,
+  "steps": 1120,
+  "source_regions": [
+    "jiuzhai_valley",
+    "longxi_river",
+    "moxitaidi",
+    "wenchuan"
+  ],
+  "domain_counts": {
+    "0": 1795,
+    "1": 1795,
+    "2": 1795,
+    "3": 1795,
+    "4": 1795
+  },
+  "source_validation": {
+    "iou": 0.6292929234661787,
+    "dice": 0.7724736471909702,
+    "f1": 0.7724735972542344,
+    "precision": 0.800970956949717,
+    "recall": 0.7459344513132647,
+    "accuracy": 0.9311858952393894,
+    "tp": 981831.0,
+    "fp": 243970.0,
+    "fn": 334412.0,
+    "tn": 6844779.0,
+    "loss": 1.2430845852251406
+  },
+  "init_checkpoint": "/root/autodl-tmp/landslide_unet_project/outputs/q2_x2_aug_none_deeplabv3plus_seed777/best_model.pth"
+}

@@ -1,4 +1,4 @@
-"""Spatial-cluster bootstrap for the two-architecture X3 exposure-matched contrast."""
+"""Spatial-cluster bootstrap for the four-backbone X3 exposure-matched contrast."""
 
 from __future__ import annotations
 
@@ -19,7 +19,8 @@ import route1_spatial_cluster_bootstrap as spatial
 
 REGIONS = ["hokkaido_iburi_tobu", "lombok", "palu"]
 SEEDS = [42, 2026, 777]
-ARCHITECTURES = {"resunet": "ResUNet", "bottleneckliteask": "Bottleneck-LiteASK"}
+ARCHITECTURES = {"resunet": "ResUNet", "bottleneckliteask": "Bottleneck-LiteASK",
+                 "segformerb0": "SegFormer-B0", "deeplabv3plus": "DeepLabV3+"}
 
 
 def read_counts(path: Path) -> dict[tuple[str, str], np.ndarray]:
@@ -66,9 +67,9 @@ def write_csv(path: Path, rows: list[dict]) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--tile-root", default=str(PROJECT / "reports" / "q2_x3_tiles"))
-    parser.add_argument("--spatial-index", default=str(PROJECT / "data" / "processed" / "benchmark_v2_regions_512" / "target_spatial_index.csv"))
-    parser.add_argument("--output-dir", default=str(PROJECT / "reports" / "q2_x3_bootstrap"))
+    parser.add_argument("--tile-root", default=str(PROJECT / "metrics" / "q2_x3_tiles"))
+    parser.add_argument("--spatial-index", default=str(PROJECT / "data_manifests" / "target_spatial_index.csv"))
+    parser.add_argument("--output-dir", default=str(PROJECT / "metrics" / "q2_x3_bootstrap"))
     parser.add_argument("--draws", type=int, default=10000)
     parser.add_argument("--seed", type=int, default=20260927)
     args = parser.parse_args()

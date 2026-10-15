@@ -1,0 +1,82 @@
+{
+  "resunet|cas-multistream|source_val": [
+    0.6933439622035756,
+    0.5787244531118518,
+    0.8079634712952994
+  ],
+  "resunet|cas-multistream|hokkaido_iburi_tobu": [
+    12.55712181195141,
+    9.169542995088555,
+    15.944700628814264
+  ],
+  "resunet|cas-multistream|lombok": [
+    5.3936501361388745,
+    4.261380667569897,
+    6.525919604707852
+  ],
+  "resunet|cas-multistream|palu": [
+    1.7423157871418307,
+    1.577022207758537,
+    1.9076093665251244
+  ],
+  "resunet|pooled|source_val": [
+    0.9351456253508156,
+    0.6492043502234986,
+    1.2210869004781326
+  ],
+  "resunet|pooled|hokkaido_iburi_tobu": [
+    2.6478153897835335,
+    0.9179874585647285,
+    4.377643321002338
+  ],
+  "resunet|pooled|lombok": [
+    2.867844063029086,
+    0.10678234489270322,
+    5.628905781165468
+  ],
+  "resunet|pooled|palu": [
+    0.8306193834000221,
+    0.5893221751401139,
+    1.0719165916599303
+  ],
+  "bottleneckliteask|cas-multistream|source_val": [
+    0.49983727711460685,
+    0.41515725196267433,
+    0.5845173022665393
+  ],
+  "bottleneckliteask|cas-multistream|hokkaido_iburi_tobu": [
+    11.92942510027653,
+    8.679111190850918,
+    15.179739009702143
+  ],
+  "bottleneckliteask|cas-multistream|lombok": [
+    5.611090779911216,
+    4.892405694529705,
+    6.329775865292728
+  ],
+  "bottleneckliteask|cas-multistream|palu": [
+    2.0887378937642094,
+    1.0392822691803454,
+    3.138193518348073
+  ],
+  "bottleneckliteask|pooled|source_val": [
+    0.7249286609049651,
+    0.6356964324858593,
+    0.8141608893240709
+  ],
+  "bottleneckliteask|pooled|hokkaido_iburi_tobu": [
+    2.635657138100055,
+    -0.6541469087664886,
+    5.925461184966599
+  ],
+  "bottleneckliteask|pooled|lombok": [
+    5.012753483138181,
+    3.225718939059268,
+    6.799788027217094
+  ],
+  "bottleneckliteask|pooled|palu": [
+    1.1055594246296738,
+    1.0694949020854434,
+    1.1416239471739043
+  ]
+}

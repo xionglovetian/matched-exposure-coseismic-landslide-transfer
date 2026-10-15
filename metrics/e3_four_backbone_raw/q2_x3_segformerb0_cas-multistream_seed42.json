@@ -1,0 +1,32 @@
+{
+  "regime": "cas-multistream",
+  "seed": 42,
+  "steps": 1120,
+  "source_regions": [
+    "jiuzhai_valley",
+    "longxi_river",
+    "moxitaidi",
+    "wenchuan"
+  ],
+  "domain_counts": {
+    "0": 1795,
+    "1": 1795,
+    "2": 1795,
+    "3": 1795,
+    "4": 1795
+  },
+  "source_validation": {
+    "iou": 0.6465600845827436,
+    "dice": 0.7853464815972251,
+    "f1": 0.7853464316061873,
+    "precision": 0.7960197063709519,
+    "recall": 0.7749556882733071,
+    "accuracy": 0.9336589493481857,
+    "tp": 1020030.0,
+    "fp": 261383.0,
+    "fn": 296213.0,
+    "tn": 6827366.0,
+    "loss": 1.2473639507739864
+  },
+  "init_checkpoint": "/root/autodl-tmp/landslide_unet_project/outputs/q2_x2_aug_none_segformerb0_seed42/best_model.pth"
+}

@@ -1,4 +1,4 @@
-"""Seed-stratified reanalysis for the fixed three-region X3 contrast.
+"""Seed-stratified reanalysis for the fixed three-region X3 contrast (four backbones).
 
 The fixed regions are Hokkaido, Lombok and Palu. The script reports:
 1. seed-level macro effects;
@@ -12,14 +12,16 @@ from pathlib import Path
 import numpy as np
 from scipy.stats import t as tdist
 
-PROJECT = Path(r"D:\landslide_unet_project")
+import os as _repo_os
+PROJECT = Path(_repo_os.environ.get("LANDSLIDE_PROJECT_ROOT", Path(__file__).resolve().parents[1])).resolve()
 sys.path.insert(0, str(PROJECT))
-sys.path.insert(0, str(PROJECT / "scripts"))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import route1_spatial_cluster_bootstrap as spatial
 from q2_x3_spatial_bootstrap import REGIONS, SEEDS, build_pairs
 
 ENDPOINTS = ["iou", "balanced_iou", "mcc", "precision", "recall"]
-ARCHITECTURES = {"resunet": "ResUNet", "bottleneckliteask": "Bottleneck-LiteASK"}
+ARCHITECTURES = {"resunet": "ResUNet", "bottleneckliteask": "Bottleneck-LiteASK",
+                 "segformerb0": "SegFormer-B0", "deeplabv3plus": "DeepLabV3+"}
 
 
 def write_csv(path: Path, rows: list[dict]) -> None:
@@ -64,9 +66,9 @@ def fixed_region_seed_bootstrap(pairs, scheme, spatial_index, rng, draws_count, 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--tile-root", default=str(PROJECT / "reports" / "q2_x3_tiles"))
-    parser.add_argument("--spatial-index", default=str(PROJECT / "data" / "processed" / "benchmark_v2_regions_512" / "target_spatial_index.csv"))
-    parser.add_argument("--output-dir", default=str(PROJECT / "reports" / "q2_x3_seed_stratified_bootstrap"))
+    parser.add_argument("--tile-root", default=str(PROJECT / "metrics" / "q2_x3_tiles"))
+    parser.add_argument("--spatial-index", default=str(PROJECT / "data_manifests" / "target_spatial_index.csv"))
+    parser.add_argument("--output-dir", default=str(PROJECT / "metrics" / "q2_x3_seed_stratified_bootstrap"))
     parser.add_argument("--draws", type=int, default=10000)
     args = parser.parse_args()
     spatial_index = spatial.load_spatial_index(Path(args.spatial_index))

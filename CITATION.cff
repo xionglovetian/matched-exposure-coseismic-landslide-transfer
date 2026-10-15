@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this benchmark, please cite the archived release and the accompanying manuscript."
+title: "Matched-exposure coseismic landslide transfer benchmark"
+abstract: >-
+  Experiment code, frozen data manifests and splits, machine-readable metrics,
+  bootstrap and interval routines, and audit reports for a retrospective,
+  region-held-out benchmark of coseismic landslide segmentation under
+  cross-event domain shift, including the four-backbone matched-exposure
+  contrast.
+type: software
+authors:
+  - family-names: Xiong
+    given-names: Luoyang
+    affiliation: "University of Emergency Management, Sanhe 065201, Hebei, China"
+  - family-names: Meng
+    given-names: Juan
+    affiliation: "University of Emergency Management, Sanhe 065201, Hebei, China"
+    orcid: ""
+contact:
+  - family-names: Meng
+    given-names: Juan
+    email: mengjuan@cidp.edu.cn
+license: MIT
+version: "repro-20261015-r7"
+date-released: "2026-10-15"
+repository-code: "https://github.com/xionglovetian/matched-exposure-coseismic-landslide-transfer"
+keywords:
+  - coseismic landslides
+  - cross-event transfer
+  - source pooling
+  - matched exposure
+  - landslide segmentation
+  - model transferability

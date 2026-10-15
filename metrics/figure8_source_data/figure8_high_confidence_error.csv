@@ -1,0 +1,17 @@
+﻿architecture,arm,domain,mean_percent,ci_low,ci_high,seeds
+ResUNet,source-only,source_val,0.693344,0.578724,0.807963,42;2026;777
+ResUNet,source-only,hokkaido_iburi_tobu,12.557122,9.169543,15.944701,42;2026;777
+ResUNet,source-only,lombok,5.393650,4.261381,6.525920,42;2026;777
+ResUNet,source-only,palu,1.742316,1.577022,1.907609,42;2026;777
+ResUNet,pooled,source_val,0.935146,0.649204,1.221087,42;2026;777
+ResUNet,pooled,hokkaido_iburi_tobu,2.647815,0.917987,4.377643,42;2026;777
+ResUNet,pooled,lombok,2.867844,0.106782,5.628906,42;2026;777
+ResUNet,pooled,palu,0.830619,0.589322,1.071917,42;2026;777
+Bottleneck-LiteASK,source-only,source_val,0.499837,0.415157,0.584517,42;2026;777
+Bottleneck-LiteASK,source-only,hokkaido_iburi_tobu,11.929425,8.679111,15.179739,42;2026;777
+Bottleneck-LiteASK,source-only,lombok,5.611091,4.892406,6.329776,42;2026;777
+Bottleneck-LiteASK,source-only,palu,2.088738,1.039282,3.138194,42;2026;777
+Bottleneck-LiteASK,pooled,source_val,0.724929,0.635696,0.814161,42;2026;777
+Bottleneck-LiteASK,pooled,hokkaido_iburi_tobu,2.635657,-0.654147,5.925461,42;2026;777
+Bottleneck-LiteASK,pooled,lombok,5.012753,3.225719,6.799788,42;2026;777
+Bottleneck-LiteASK,pooled,palu,1.105559,1.069495,1.141624,42;2026;777

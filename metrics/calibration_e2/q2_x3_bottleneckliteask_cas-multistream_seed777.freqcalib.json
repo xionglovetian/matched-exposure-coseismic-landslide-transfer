@@ -1,0 +1,1031 @@
+{
+  "run_id": "q2_x3_bottleneckliteask_cas-multistream_seed777",
+  "arch": "bottleneckliteask",
+  "arm": "cas-multistream",
+  "seed": 777,
+  "model": "BottleneckLiteASKUNetPlusPlus",
+  "checkpoint": "D:\\landslide_unet_project\\outputs\\q2_x3_bottleneckliteask_cas-multistream_seed777\\final_model.pth",
+  "high_confidence_threshold": 0.9,
+  "domains": {
+    "source_val": {
+      "pixels": 8404992,
+      "error_rate": 0.04487071492750975,
+      "mean_confidence": 0.9407564997673035,
+      "positive_rate": 0.15352197836714182,
+      "high_confidence_pixels": 6813158,
+      "high_confidence_fraction": 0.8106085050408138,
+      "high_confidence_error_rate": 0.005254831900272972,
+      "bins_equal_freq": [
+        {
+          "pixels": 560333,
+          "pixel_fraction": 0.06666669046204922,
+          "mean_confidence": 0.5925593376159668,
+          "error_rate": 0.37739879678691063,
+          "lower": 0.5,
+          "upper": 0.6808786392211914
+        },
+        {
+          "pixels": 560333,
+          "pixel_fraction": 0.06666669046204922,
+          "mean_confidence": 0.7564926147460938,
+          "error_rate": 0.17023805487094282,
+          "lower": 0.6808786392211914,
+          "upper": 0.8221891522407532
+        },
+        {
+          "pixels": 560333,
+          "pixel_fraction": 0.06666669046204922,
+          "mean_confidence": 0.8708216547966003,
+          "error_rate": 0.06890010047596697,
+          "lower": 0.8221891522407532,
+          "upper": 0.9111796617507935
+        },
+        {
+          "pixels": 560333,
+          "pixel_fraction": 0.06666669046204922,
+          "mean_confidence": 0.9371566772460938,
+          "error_rate": 0.028832854748872545,
+          "lower": 0.9111796617507935,
+          "upper": 0.9585376977920532
+        },
+        {
+          "pixels": 560333,
+          "pixel_fraction": 0.06666669046204922,
+          "mean_confidence": 0.9718844890594482,
+          "error_rate": 0.01457883080239786,
+          "lower": 0.9585376977920532,
+          "upper": 0.9825575351715088
+        },
+        {
+          "pixels": 560333,
+          "pixel_fraction": 0.06666669046204922,
+          "mean_confidence": 0.9886584281921387,
+          "error_rate": 0.0076704388283395765,
+          "lower": 0.9825575351715088,
+          "upper": 0.9933071732521057
+        },
+        {
+          "pixels": 560333,
+          "pixel_fraction": 0.06666669046204922,
+          "mean_confidence": 0.9958859086036682,
+          "error_rate": 0.0027697815406195958,
+          "lower": 0.9933071732521057,
+          "upper": 0.9976768493652344
+        },
+        {
+          "pixels": 560333,
+          "pixel_fraction": 0.06666669046204922,
+          "mean_confidence": 0.9986077547073364,
+          "error_rate": 0.0013367051378376787,
+          "lower": 0.9976768493652344,
+          "upper": 0.999220609664917
+        },
+        {
+          "pixels": 560333,
+          "pixel_fraction": 0.06666669046204922,
+          "mean_confidence": 0.9995300769805908,
+          "error_rate": 0.0007638315073358163,
+          "lower": 0.999220609664917,
+          "upper": 0.9997388124465942
+        },
+        {
+          "pixels": 560333,
+          "pixel_fraction": 0.06666669046204922,
+          "mean_confidence": 0.9998380541801453,
+          "error_rate": 0.0004211781208674128,
+          "lower": 0.9997388124465942,
+          "upper": 0.9999096989631653
+        },
+        {
+          "pixels": 560333,
+          "pixel_fraction": 0.06666669046204922,
+          "mean_confidence": 0.9999416470527649,
+          "error_rate": 0.00014455689741635778,
+          "lower": 0.9999096989631653,
+          "upper": 0.9999668002128601
+        },
+        {
+          "pixels": 560333,
+          "pixel_fraction": 0.06666669046204922,
+          "mean_confidence": 0.9999781250953674,
+          "error_rate": 5.3539591635688064e-06,
+          "lower": 0.9999668002128601,
+          "upper": 0.999987781047821
+        },
+        {
+          "pixels": 560332,
+          "pixel_fraction": 0.06666657148513645,
+          "mean_confidence": 0.9999919533729553,
+          "error_rate": 0.0,
+          "lower": 0.999987781047821,
+          "upper": 0.9999955296516418
+        },
+        {
+          "pixels": 560332,
+          "pixel_fraction": 0.06666657148513645,
+          "mean_confidence": 0.9999976754188538,
+          "error_rate": 0.0,
+          "lower": 0.9999955296516418,
+          "upper": 0.999998927116394
+        },
+        {
+          "pixels": 560332,
+          "pixel_fraction": 0.06666657148513645,
+          "mean_confidence": 0.9999997615814209,
+          "error_rate": 0.0,
+          "lower": 0.999998927116394,
+          "upper": 1.0
+        }
+      ],
+      "ece_equal_freq_15": 0.014458274969480335,
+      "bins_equal_width": [
+        {
+          "lower": 0.5,
+          "upper": 0.5333333333333333,
+          "pixels": 98179,
+          "pixel_fraction": 0.011681034318652535,
+          "mean_confidence": 0.5166924595832825,
+          "error_rate": 0.48052027419305554
+        },
+        {
+          "lower": 0.5333333333333333,
+          "upper": 0.5666666666666667,
+          "pixels": 100453,
+          "pixel_fraction": 0.011951587818287037,
+          "mean_confidence": 0.5501222610473633,
+          "error_rate": 0.43761759230685
+        },
+        {
+          "lower": 0.5666666666666667,
+          "upper": 0.6,
+          "pixels": 101292,
+          "pixel_fraction": 0.012051409448099416,
+          "mean_confidence": 0.583432674407959,
+          "error_rate": 0.3921138885598073
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.6333333333333333,
+          "pixels": 102123,
+          "pixel_fraction": 0.01215027926260965,
+          "mean_confidence": 0.6163572072982788,
+          "error_rate": 0.34526012749331686
+        },
+        {
+          "lower": 0.6333333333333333,
+          "upper": 0.6666666666666666,
+          "pixels": 109652,
+          "pixel_fraction": 0.013046056438840156,
+          "mean_confidence": 0.6496021747589111,
+          "error_rate": 0.29486922263159815
+        },
+        {
+          "lower": 0.6666666666666666,
+          "upper": 0.7,
+          "pixels": 113290,
+          "pixel_fraction": 0.013478894447490253,
+          "mean_confidence": 0.6833953261375427,
+          "error_rate": 0.2531291376114397
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.7333333333333334,
+          "pixels": 118215,
+          "pixel_fraction": 0.014064855742872808,
+          "mean_confidence": 0.7168691158294678,
+          "error_rate": 0.21241805185467158
+        },
+        {
+          "lower": 0.7333333333333334,
+          "upper": 0.7666666666666666,
+          "pixels": 129353,
+          "pixel_fraction": 0.015390020597283139,
+          "mean_confidence": 0.7503820657730103,
+          "error_rate": 0.17488577767813657
+        },
+        {
+          "lower": 0.7666666666666666,
+          "upper": 0.8,
+          "pixels": 141654,
+          "pixel_fraction": 0.01685355560124269,
+          "mean_confidence": 0.7838385701179504,
+          "error_rate": 0.13950894432914002
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.8333333333333333,
+          "pixels": 162938,
+          "pixel_fraction": 0.019385860212597465,
+          "mean_confidence": 0.8173642754554749,
+          "error_rate": 0.11056966453497649
+        },
+        {
+          "lower": 0.8333333333333333,
+          "upper": 0.8666666666666667,
+          "pixels": 185167,
+          "pixel_fraction": 0.02203059800651803,
+          "mean_confidence": 0.8507896065711975,
+          "error_rate": 0.08179103187933055
+        },
+        {
+          "lower": 0.8666666666666667,
+          "upper": 0.9,
+          "pixels": 229518,
+          "pixel_fraction": 0.02730734306469298,
+          "mean_confidence": 0.8840007781982422,
+          "error_rate": 0.05906290574159761
+        },
+        {
+          "lower": 0.9,
+          "upper": 0.9333333333333333,
+          "pixels": 306268,
+          "pixel_fraction": 0.03643882111963938,
+          "mean_confidence": 0.9174098372459412,
+          "error_rate": 0.03928911933339428
+        },
+        {
+          "lower": 0.9333333333333333,
+          "upper": 0.9666666666666667,
+          "pixels": 495136,
+          "pixel_fraction": 0.05890975268031189,
+          "mean_confidence": 0.9514704942703247,
+          "error_rate": 0.02231508110902863
+        },
+        {
+          "lower": 0.9666666666666667,
+          "upper": 1.0,
+          "pixels": 6011754,
+          "pixel_fraction": 0.7152599312408626,
+          "mean_confidence": 0.9966855645179749,
+          "error_rate": 0.002115855039976686
+        }
+      ],
+      "ece_equal_width_15": 0.014373268077356383
+    },
+    "hokkaido_iburi_tobu": {
+      "pixels": 24313856,
+      "error_rate": 0.18988431945965298,
+      "mean_confidence": 0.9084579348564148,
+      "positive_rate": 0.11829028682246041,
+      "high_confidence_pixels": 17211777,
+      "high_confidence_fraction": 0.7078999316274638,
+      "high_confidence_error_rate": 0.10514887567971627,
+      "bins_equal_freq": [
+        {
+          "pixels": 1620924,
+          "pixel_fraction": 0.06666667763434973,
+          "mean_confidence": 0.5541998744010925,
+          "error_rate": 0.4782728863290321,
+          "lower": 0.5,
+          "upper": 0.6081287264823914
+        },
+        {
+          "pixels": 1620924,
+          "pixel_fraction": 0.06666667763434973,
+          "mean_confidence": 0.6598217487335205,
+          "error_rate": 0.43392595828058567,
+          "lower": 0.6081287264823914,
+          "upper": 0.7106282711029053
+        },
+        {
+          "pixels": 1620924,
+          "pixel_fraction": 0.06666667763434973,
+          "mean_confidence": 0.7559958100318909,
+          "error_rate": 0.38474166586465497,
+          "lower": 0.7106282711029053,
+          "upper": 0.7994422912597656
+        },
+        {
+          "pixels": 1620924,
+          "pixel_fraction": 0.06666667763434973,
+          "mean_confidence": 0.8387349843978882,
+          "error_rate": 0.32747247866031964,
+          "lower": 0.7994422912597656,
+          "upper": 0.8749346137046814
+        },
+        {
+          "pixels": 1620924,
+          "pixel_fraction": 0.06666667763434973,
+          "mean_confidence": 0.906061589717865,
+          "error_rate": 0.25553079601511236,
+          "lower": 0.8749346137046814,
+          "upper": 0.9334307909011841
+        },
+        {
+          "pixels": 1620924,
+          "pixel_fraction": 0.06666667763434973,
+          "mean_confidence": 0.9529427886009216,
+          "error_rate": 0.19468957212059296,
+          "lower": 0.9334307909011841,
+          "upper": 0.968856155872345
+        },
+        {
+          "pixels": 1620924,
+          "pixel_fraction": 0.06666667763434973,
+          "mean_confidence": 0.978602409362793,
+          "error_rate": 0.16111057643664972,
+          "lower": 0.968856155872345,
+          "upper": 0.9859363436698914
+        },
+        {
+          "pixels": 1620924,
+          "pixel_fraction": 0.06666667763434973,
+          "mean_confidence": 0.9898746609687805,
+          "error_rate": 0.1274637182249137,
+          "lower": 0.9859363436698914,
+          "upper": 0.9930961728096008
+        },
+        {
+          "pixels": 1620924,
+          "pixel_fraction": 0.06666667763434973,
+          "mean_confidence": 0.9950551390647888,
+          "error_rate": 0.10124657294234646,
+          "lower": 0.9930961728096008,
+          "upper": 0.9966233968734741
+        },
+        {
+          "pixels": 1620924,
+          "pixel_fraction": 0.06666667763434973,
+          "mean_confidence": 0.9975608587265015,
+          "error_rate": 0.0845116735886445,
+          "lower": 0.9966233968734741,
+          "upper": 0.9982993006706238
+        },
+        {
+          "pixels": 1620924,
+          "pixel_fraction": 0.06666667763434973,
+          "mean_confidence": 0.9988139271736145,
+          "error_rate": 0.07099715964474583,
+          "lower": 0.9982993006706238,
+          "upper": 0.999220609664917
+        },
+        {
+          "pixels": 1620923,
+          "pixel_fraction": 0.06666663650553824,
+          "mean_confidence": 0.9994642734527588,
+          "error_rate": 0.06257916014517655,
+          "lower": 0.999220609664917,
+          "upper": 0.9996646642684937
+        },
+        {
+          "pixels": 1620923,
+          "pixel_fraction": 0.06666663650553824,
+          "mean_confidence": 0.9997973442077637,
+          "error_rate": 0.060007168755085834,
+          "lower": 0.9996646642684937,
+          "upper": 0.9998911023139954
+        },
+        {
+          "pixels": 1620923,
+          "pixel_fraction": 0.06666663650553824,
+          "mean_confidence": 0.9999461770057678,
+          "error_rate": 0.0641739305321721,
+          "lower": 0.9998911023139954,
+          "upper": 0.9999798536300659
+        },
+        {
+          "pixels": 1620923,
+          "pixel_fraction": 0.06666663650553824,
+          "mean_confidence": 0.999992847442627,
+          "error_rate": 0.041541146618315615,
+          "lower": 0.9999798536300659,
+          "upper": 1.0
+        }
+      ],
+      "ece_equal_freq_15": 0.09834193331831885,
+      "bins_equal_width": [
+        {
+          "lower": 0.5,
+          "upper": 0.5333333333333333,
+          "pixels": 497437,
+          "pixel_fraction": 0.020458992600762296,
+          "mean_confidence": 0.5166663527488708,
+          "error_rate": 0.49703982614883896
+        },
+        {
+          "lower": 0.5333333333333333,
+          "upper": 0.5666666666666667,
+          "pixels": 501017,
+          "pixel_fraction": 0.0206062337458937,
+          "mean_confidence": 0.5500769019126892,
+          "error_rate": 0.4790915278323889
+        },
+        {
+          "lower": 0.5666666666666667,
+          "upper": 0.6,
+          "pixels": 499343,
+          "pixel_fraction": 0.020537384115460747,
+          "mean_confidence": 0.5834336280822754,
+          "error_rate": 0.4663307586168225
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.6333333333333333,
+          "pixels": 500716,
+          "pixel_fraction": 0.020593853973635445,
+          "mean_confidence": 0.6163740754127502,
+          "error_rate": 0.44927463871735673
+        },
+        {
+          "lower": 0.6333333333333333,
+          "upper": 0.6666666666666666,
+          "pixels": 531935,
+          "pixel_fraction": 0.02187785433951735,
+          "mean_confidence": 0.6495893001556396,
+          "error_rate": 0.4402004004248639
+        },
+        {
+          "lower": 0.6666666666666666,
+          "upper": 0.7,
+          "pixels": 546465,
+          "pixel_fraction": 0.022475455970455693,
+          "mean_confidence": 0.6833893060684204,
+          "error_rate": 0.42247353444410896
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.7333333333333334,
+          "pixels": 565151,
+          "pixel_fraction": 0.02324398894194323,
+          "mean_confidence": 0.7168148159980774,
+          "error_rate": 0.4084218200091657
+        },
+        {
+          "lower": 0.7333333333333334,
+          "upper": 0.7666666666666666,
+          "pixels": 597545,
+          "pixel_fraction": 0.024576315661324965,
+          "mean_confidence": 0.7503328323364258,
+          "error_rate": 0.388551489845953
+        },
+        {
+          "lower": 0.7666666666666666,
+          "upper": 0.8,
+          "pixels": 630855,
+          "pixel_fraction": 0.02594631637203083,
+          "mean_confidence": 0.7836596965789795,
+          "error_rate": 0.3678896101322808
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.8333333333333333,
+          "pixels": 685683,
+          "pixel_fraction": 0.028201326848361692,
+          "mean_confidence": 0.8171616792678833,
+          "error_rate": 0.34588869783850557
+        },
+        {
+          "lower": 0.8333333333333333,
+          "upper": 0.8666666666666667,
+          "pixels": 725586,
+          "pixel_fraction": 0.02984248981321597,
+          "mean_confidence": 0.8505538105964661,
+          "error_rate": 0.31893118114186325
+        },
+        {
+          "lower": 0.8666666666666667,
+          "upper": 0.9,
+          "pixels": 820346,
+          "pixel_fraction": 0.0337398559899343,
+          "mean_confidence": 0.8836675882339478,
+          "error_rate": 0.28431296062880784
+        },
+        {
+          "lower": 0.9,
+          "upper": 0.9333333333333333,
+          "pixels": 992513,
+          "pixel_fraction": 0.04082088007759855,
+          "mean_confidence": 0.9171628355979919,
+          "error_rate": 0.2398114684643929
+        },
+        {
+          "lower": 0.9333333333333333,
+          "upper": 0.9666666666666667,
+          "pixels": 1484627,
+          "pixel_fraction": 0.06106094401480374,
+          "mean_confidence": 0.951341986656189,
+          "error_rate": 0.1961098646326653
+        },
+        {
+          "lower": 0.9666666666666667,
+          "upper": 1.0,
+          "pixels": 14734637,
+          "pixel_fraction": 0.6060181075350615,
+          "mean_confidence": 0.9951826333999634,
+          "error_rate": 0.08691310142217959
+        }
+      ],
+      "ece_equal_width_15": 0.09834219921146056
+    },
+    "lombok": {
+      "pixels": 7143424,
+      "error_rate": 0.1204316025480218,
+      "mean_confidence": 0.9511239528656006,
+      "positive_rate": 0.10290597338195241,
+      "high_confidence_pixels": 6024180,
+      "high_confidence_fraction": 0.8433182742617545,
+      "high_confidence_error_rate": 0.05944692887662719,
+      "bins_equal_freq": [
+        {
+          "pixels": 476229,
+          "pixel_fraction": 0.06666676932518635,
+          "mean_confidence": 0.6099734306335449,
+          "error_rate": 0.4768462231405479,
+          "lower": 0.5,
+          "upper": 0.7138307690620422
+        },
+        {
+          "pixels": 476229,
+          "pixel_fraction": 0.06666676932518635,
+          "mean_confidence": 0.7969692349433899,
+          "error_rate": 0.4332138529992924,
+          "lower": 0.7138307690620422,
+          "upper": 0.8652241230010986
+        },
+        {
+          "pixels": 476229,
+          "pixel_fraction": 0.06666676932518635,
+          "mean_confidence": 0.9100663065910339,
+          "error_rate": 0.3732028078928415,
+          "lower": 0.8652241230010986,
+          "upper": 0.9449946880340576
+        },
+        {
+          "pixels": 476229,
+          "pixel_fraction": 0.06666676932518635,
+          "mean_confidence": 0.9663522839546204,
+          "error_rate": 0.2182269454401139,
+          "lower": 0.9449946880340576,
+          "upper": 0.9817357063293457
+        },
+        {
+          "pixels": 476228,
+          "pixel_fraction": 0.06666662933629587,
+          "mean_confidence": 0.9891735911369324,
+          "error_rate": 0.08227781650805917,
+          "lower": 0.9817357063293457,
+          "upper": 0.9942697286605835
+        },
+        {
+          "pixels": 476228,
+          "pixel_fraction": 0.06666662933629587,
+          "mean_confidence": 0.9964430928230286,
+          "error_rate": 0.04219407510688158,
+          "lower": 0.9942697286605835,
+          "upper": 0.9979492425918579
+        },
+        {
+          "pixels": 476228,
+          "pixel_fraction": 0.06666662933629587,
+          "mean_confidence": 0.9987191557884216,
+          "error_rate": 0.033969023240968614,
+          "lower": 0.9979492425918579,
+          "upper": 0.9992445707321167
+        },
+        {
+          "pixels": 476228,
+          "pixel_fraction": 0.06666662933629587,
+          "mean_confidence": 0.9995163679122925,
+          "error_rate": 0.02863754336158311,
+          "lower": 0.9992445707321167,
+          "upper": 0.9997040629386902
+        },
+        {
+          "pixels": 476228,
+          "pixel_fraction": 0.06666662933629587,
+          "mean_confidence": 0.999800980091095,
+          "error_rate": 0.025120320518743123,
+          "lower": 0.9997040629386902,
+          "upper": 0.9998766183853149
+        },
+        {
+          "pixels": 476228,
+          "pixel_fraction": 0.06666662933629587,
+          "mean_confidence": 0.99991375207901,
+          "error_rate": 0.025865761777971896,
+          "lower": 0.9998766183853149,
+          "upper": 0.9999417066574097
+        },
+        {
+          "pixels": 476228,
+          "pixel_fraction": 0.06666662933629587,
+          "mean_confidence": 0.9999606013298035,
+          "error_rate": 0.022121756805563723,
+          "lower": 0.9999417066574097,
+          "upper": 0.9999741315841675
+        },
+        {
+          "pixels": 476228,
+          "pixel_fraction": 0.06666662933629587,
+          "mean_confidence": 0.9999817609786987,
+          "error_rate": 0.017611312228596385,
+          "lower": 0.9999741315841675,
+          "upper": 0.999987781047821
+        },
+        {
+          "pixels": 476228,
+          "pixel_fraction": 0.06666662933629587,
+          "mean_confidence": 0.9999909996986389,
+          "error_rate": 0.013497736378373384,
+          "lower": 0.999987781047821,
+          "upper": 0.9999942183494568
+        },
+        {
+          "pixels": 476228,
+          "pixel_fraction": 0.06666662933629587,
+          "mean_confidence": 0.9999958276748657,
+          "error_rate": 0.00851482903147232,
+          "lower": 0.9999942183494568,
+          "upper": 0.999997615814209
+        },
+        {
+          "pixels": 476228,
+          "pixel_fraction": 0.06666662933629587,
+          "mean_confidence": 0.999998927116394,
+          "error_rate": 0.0051718924548745555,
+          "lower": 0.999997615814209,
+          "upper": 1.0
+        }
+      ],
+      "ece_equal_freq_15": 0.07155528377853619,
+      "bins_equal_width": [
+        {
+          "lower": 0.5,
+          "upper": 0.5333333333333333,
+          "pixels": 70841,
+          "pixel_fraction": 0.009916952990610664,
+          "mean_confidence": 0.5166266560554504,
+          "error_rate": 0.500910489688175
+        },
+        {
+          "lower": 0.5333333333333333,
+          "upper": 0.5666666666666667,
+          "pixels": 71171,
+          "pixel_fraction": 0.00996314932446961,
+          "mean_confidence": 0.5501413345336914,
+          "error_rate": 0.4875440839667842
+        },
+        {
+          "lower": 0.5666666666666667,
+          "upper": 0.6,
+          "pixels": 70938,
+          "pixel_fraction": 0.009930531912987385,
+          "mean_confidence": 0.5834910869598389,
+          "error_rate": 0.48318249739208885
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.6333333333333333,
+          "pixels": 71916,
+          "pixel_fraction": 0.01006744104787844,
+          "mean_confidence": 0.6163879632949829,
+          "error_rate": 0.47109127315201066
+        },
+        {
+          "lower": 0.6333333333333333,
+          "upper": 0.6666666666666666,
+          "pixels": 77101,
+          "pixel_fraction": 0.010793283445025803,
+          "mean_confidence": 0.6495887637138367,
+          "error_rate": 0.47132981413989444
+        },
+        {
+          "lower": 0.6666666666666666,
+          "upper": 0.7,
+          "pixels": 78985,
+          "pixel_fraction": 0.011057022514693234,
+          "mean_confidence": 0.6834151148796082,
+          "error_rate": 0.46267012723934925
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.7333333333333334,
+          "pixels": 83134,
+          "pixel_fraction": 0.011637836421301605,
+          "mean_confidence": 0.7169188261032104,
+          "error_rate": 0.45590251882502947
+        },
+        {
+          "lower": 0.7333333333333334,
+          "upper": 0.7666666666666666,
+          "pixels": 89772,
+          "pixel_fraction": 0.012567082676318807,
+          "mean_confidence": 0.7504490613937378,
+          "error_rate": 0.448190972686361
+        },
+        {
+          "lower": 0.7666666666666666,
+          "upper": 0.8,
+          "pixels": 99010,
+          "pixel_fraction": 0.013860300046588303,
+          "mean_confidence": 0.7838199138641357,
+          "error_rate": 0.43933946066053936
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.8333333333333333,
+          "pixels": 114867,
+          "pixel_fraction": 0.01608010388295585,
+          "mean_confidence": 0.817358136177063,
+          "error_rate": 0.42880897037443305
+        },
+        {
+          "lower": 0.8333333333333333,
+          "upper": 0.8666666666666667,
+          "pixels": 130411,
+          "pixel_fraction": 0.01825609119660264,
+          "mean_confidence": 0.850805938243866,
+          "error_rate": 0.41731142311614816
+        },
+        {
+          "lower": 0.8666666666666667,
+          "upper": 0.9,
+          "pixels": 161098,
+          "pixel_fraction": 0.022551930278813075,
+          "mean_confidence": 0.8839059472084045,
+          "error_rate": 0.40744764056661165
+        },
+        {
+          "lower": 0.9,
+          "upper": 0.9333333333333333,
+          "pixels": 208543,
+          "pixel_fraction": 0.029193703187715022,
+          "mean_confidence": 0.9173264503479004,
+          "error_rate": 0.36481205314971016
+        },
+        {
+          "lower": 0.9333333333333333,
+          "upper": 0.9666666666666667,
+          "pixels": 325130,
+          "pixel_fraction": 0.04551458796229931,
+          "mean_confidence": 0.9513130187988281,
+          "error_rate": 0.28737735674960785
+        },
+        {
+          "lower": 0.9666666666666667,
+          "upper": 1.0,
+          "pixels": 5490507,
+          "pixel_fraction": 0.7686099831117402,
+          "mean_confidence": 0.9974178075790405,
+          "error_rate": 0.034351108194562
+        }
+      ],
+      "ece_equal_width_15": 0.07155542225623865
+    },
+    "palu": {
+      "pixels": 13385728,
+      "error_rate": 0.07654129831414473,
+      "mean_confidence": 0.9347483515739441,
+      "positive_rate": 0.0694173675126224,
+      "high_confidence_pixels": 10628374,
+      "high_confidence_fraction": 0.7940079164913556,
+      "high_confidence_error_rate": 0.018635682184311542,
+      "bins_equal_freq": [
+        {
+          "pixels": 892382,
+          "pixel_fraction": 0.06666667662752448,
+          "mean_confidence": 0.5750335454940796,
+          "error_rate": 0.4344742498167825,
+          "lower": 0.5,
+          "upper": 0.6495786309242249
+        },
+        {
+          "pixels": 892382,
+          "pixel_fraction": 0.06666667662752448,
+          "mean_confidence": 0.7204529643058777,
+          "error_rate": 0.30023241168019976,
+          "lower": 0.6495786309242249,
+          "upper": 0.7879312038421631
+        },
+        {
+          "pixels": 892382,
+          "pixel_fraction": 0.06666667662752448,
+          "mean_confidence": 0.8436227440834045,
+          "error_rate": 0.18051798445060524,
+          "lower": 0.7879312038421631,
+          "upper": 0.8933094143867493
+        },
+        {
+          "pixels": 892382,
+          "pixel_fraction": 0.06666667662752448,
+          "mean_confidence": 0.9267188906669617,
+          "error_rate": 0.08682268355928291,
+          "lower": 0.8933094143867493,
+          "upper": 0.9539660811424255
+        },
+        {
+          "pixels": 892382,
+          "pixel_fraction": 0.06666667662752448,
+          "mean_confidence": 0.9708709120750427,
+          "error_rate": 0.041949523858616604,
+          "lower": 0.9539660811424255,
+          "upper": 0.9830850958824158
+        },
+        {
+          "pixels": 892382,
+          "pixel_fraction": 0.06666667662752448,
+          "mean_confidence": 0.9898596405982971,
+          "error_rate": 0.02419591609871109,
+          "lower": 0.9830850958824158,
+          "upper": 0.9944450855255127
+        },
+        {
+          "pixels": 892382,
+          "pixel_fraction": 0.06666667662752448,
+          "mean_confidence": 0.9966138601303101,
+          "error_rate": 0.017250460004796152,
+          "lower": 0.9944450855255127,
+          "upper": 0.9980732798576355
+        },
+        {
+          "pixels": 892382,
+          "pixel_fraction": 0.06666667662752448,
+          "mean_confidence": 0.9987627863883972,
+          "error_rate": 0.013425864708163097,
+          "lower": 0.9980732798576355,
+          "upper": 0.9992903470993042
+        },
+        {
+          "pixels": 892382,
+          "pixel_fraction": 0.06666667662752448,
+          "mean_confidence": 0.9995633363723755,
+          "error_rate": 0.011937712773229402,
+          "lower": 0.9992903470993042,
+          "upper": 0.9997388124465942
+        },
+        {
+          "pixels": 892382,
+          "pixel_fraction": 0.06666667662752448,
+          "mean_confidence": 0.9998334646224976,
+          "error_rate": 0.009332326290758891,
+          "lower": 0.9997388124465942,
+          "upper": 0.9998977184295654
+        },
+        {
+          "pixels": 892382,
+          "pixel_fraction": 0.06666667662752448,
+          "mean_confidence": 0.9999291896820068,
+          "error_rate": 0.007895721787306333,
+          "lower": 0.9998977184295654,
+          "upper": 0.9999545812606812
+        },
+        {
+          "pixels": 892382,
+          "pixel_fraction": 0.06666667662752448,
+          "mean_confidence": 0.9999683499336243,
+          "error_rate": 0.0066989248998747175,
+          "lower": 0.9999545812606812,
+          "upper": 0.9999798536300659
+        },
+        {
+          "pixels": 892382,
+          "pixel_fraction": 0.06666667662752448,
+          "mean_confidence": 0.9999867677688599,
+          "error_rate": 0.005507730994125834,
+          "lower": 0.9999798536300659,
+          "upper": 0.9999915957450867
+        },
+        {
+          "pixels": 892381,
+          "pixel_fraction": 0.06666660192109088,
+          "mean_confidence": 0.9999956488609314,
+          "error_rate": 0.004261632643456102,
+          "lower": 0.9999915957450867,
+          "upper": 0.9999974370002747
+        },
+        {
+          "pixels": 892381,
+          "pixel_fraction": 0.06666660192109088,
+          "mean_confidence": 0.9999993443489075,
+          "error_rate": 0.003616168430300511,
+          "lower": 0.9999974370002747,
+          "upper": 1.0
+        }
+      ],
+      "ece_equal_freq_15": 0.011288718253716728,
+      "bins_equal_width": [
+        {
+          "lower": 0.5,
+          "upper": 0.5333333333333333,
+          "pixels": 197472,
+          "pixel_fraction": 0.014752428855569155,
+          "mean_confidence": 0.5166963338851929,
+          "error_rate": 0.4906974153297683
+        },
+        {
+          "lower": 0.5333333333333333,
+          "upper": 0.5666666666666667,
+          "pixels": 198679,
+          "pixel_fraction": 0.014842599520922583,
+          "mean_confidence": 0.5501003861427307,
+          "error_rate": 0.4555489004877214
+        },
+        {
+          "lower": 0.5666666666666667,
+          "upper": 0.6,
+          "pixels": 198574,
+          "pixel_fraction": 0.014834755345394737,
+          "mean_confidence": 0.5834181308746338,
+          "error_rate": 0.4275484202362847
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.6333333333333333,
+          "pixels": 195803,
+          "pixel_fraction": 0.014627743817893207,
+          "mean_confidence": 0.6162943840026855,
+          "error_rate": 0.3924199322788721
+        },
+        {
+          "lower": 0.6333333333333333,
+          "upper": 0.6666666666666666,
+          "pixels": 205274,
+          "pixel_fraction": 0.015335288450504896,
+          "mean_confidence": 0.64959317445755,
+          "error_rate": 0.36861463215019924
+        },
+        {
+          "lower": 0.6666666666666666,
+          "upper": 0.7,
+          "pixels": 207853,
+          "pixel_fraction": 0.015527956342755509,
+          "mean_confidence": 0.6832994818687439,
+          "error_rate": 0.33657440595035915
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.7333333333333334,
+          "pixels": 211972,
+          "pixel_fraction": 0.015835672142747857,
+          "mean_confidence": 0.716804563999176,
+          "error_rate": 0.3040873322891703
+        },
+        {
+          "lower": 0.7333333333333334,
+          "upper": 0.7666666666666666,
+          "pixels": 223637,
+          "pixel_fraction": 0.016707122690674724,
+          "mean_confidence": 0.750302791595459,
+          "error_rate": 0.2715427232524135
+        },
+        {
+          "lower": 0.7666666666666666,
+          "upper": 0.8,
+          "pixels": 235900,
+          "pixel_fraction": 0.017623247685893514,
+          "mean_confidence": 0.7836854457855225,
+          "error_rate": 0.2403221704111912
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.8333333333333333,
+          "pixels": 260389,
+          "pixel_fraction": 0.019452733538287945,
+          "mean_confidence": 0.8172213435173035,
+          "error_rate": 0.2077660730676027
+        },
+        {
+          "lower": 0.8333333333333333,
+          "upper": 0.8666666666666667,
+          "pixels": 282988,
+          "pixel_fraction": 0.021141024231181152,
+          "mean_confidence": 0.8506426215171814,
+          "error_rate": 0.17338191018700438
+        },
+        {
+          "lower": 0.8666666666666667,
+          "upper": 0.9,
+          "pixels": 338813,
+          "pixel_fraction": 0.025311510886819155,
+          "mean_confidence": 0.8837949633598328,
+          "error_rate": 0.1377839693282135
+        },
+        {
+          "lower": 0.9,
+          "upper": 0.9333333333333333,
+          "pixels": 434833,
+          "pixel_fraction": 0.03248482264095012,
+          "mean_confidence": 0.9172845482826233,
+          "error_rate": 0.09757769074564258
+        },
+        {
+          "lower": 0.9333333333333333,
+          "upper": 0.9666666666666667,
+          "pixels": 671447,
+          "pixel_fraction": 0.05016141072043299,
+          "mean_confidence": 0.951346755027771,
+          "error_rate": 0.06026834582625285
+        },
+        {
+          "lower": 0.9666666666666667,
+          "upper": 1.0,
+          "pixels": 9522094,
+          "pixel_fraction": 0.7113616831299725,
+          "mean_confidence": 0.9970324635505676,
+          "error_rate": 0.012095028677515681
+        }
+      ],
+      "ece_equal_width_15": 0.011288358090078866
+    }
+  }
+}
