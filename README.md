@@ -19,7 +19,7 @@ documentation. File paths and commands are identical in both.
 
 仓库提供实验代码、冻结的数据清单与划分、机器可读指标、自助与区间统计程序，以及审计报告。仓库**不包含**稿件正文、影像数据、切图、模型权重，以及任何受原始数据许可限制的文件。
 
-本仓库取代此前的 `coseismic-landslide-transfer-benchmark`（双骨干快照）。旧仓的完整历史已保留为本仓的普通 Git 历史，因此 `7b143df` 在本仓仍可直接解析。
+本仓的前身是一个只含双骨干结果的独立仓库，那个仓库已停用。它的完整历史已并入本仓的普通 Git 历史，因此旧快照 `7b143df` 在本仓仍可直接解析（tag `repro-20260929-r6`）。
 
 **核心结论与预注册判定**
 
@@ -78,7 +78,7 @@ python scripts/checks/verify_manifest.py
 
 GitHub 本身不发放 DOI。将本仓库连接到 Zenodo（Settings → Webhooks → Zenodo，打开本仓库的开关）后，发布 release 即会自动归档并生成 DOI。`CITATION.cff` 与 `.zenodo.json` 已按归档所需元数据填写完毕。
 
-当前归档版本：tag `repro-20261015-r7`，对应 release [repro-20261015-r7](https://github.com/xionglovetian/matched-exposure-coseismic-landslide-transfer/releases/tag/repro-20261015-r7)。
+当前归档版本：tag `repro-20261017-r8`，对应 release [repro-20261017-r8](https://github.com/xionglovetian/matched-exposure-coseismic-landslide-transfer/releases/tag/repro-20261017-r8)。
 
 **许可**
 
@@ -109,10 +109,9 @@ audit/protocol reports. It does **not** contain the manuscript, the source or
 target imagery, processed chips, model weights, or anything restricted by the
 original data licences.
 
-This repository supersedes `coseismic-landslide-transfer-benchmark`, which holds
-the earlier two-architecture snapshot. The full two-architecture history is
-preserved here as ordinary Git history, so that snapshot is still resolvable at
-commit `7b143df`.
+An earlier standalone repository held only the two-architecture snapshot and has
+been retired. That history is preserved here as ordinary Git history, so the old
+snapshot is still resolvable at commit `7b143df` (tag `repro-20260929-r6`).
 
 ### Headline claims and where the numbers live
 
@@ -278,7 +277,7 @@ Zenodo archives that release and issues a DOI. `.zenodo.json` and `CITATION.cff`
 are already in place with the metadata that archive needs; only the version DOI
 has to be filled in after the release.
 
-The current archived version is tag `repro-20261015-r7`, published as [release repro-20261015-r7](https://github.com/xionglovetian/matched-exposure-coseismic-landslide-transfer/releases/tag/repro-20261015-r7).
+The current archived version is tag `repro-20261017-r8`, published as [release repro-20261017-r8](https://github.com/xionglovetian/matched-exposure-coseismic-landslide-transfer/releases/tag/repro-20261017-r8).
 
 ### Licence
 

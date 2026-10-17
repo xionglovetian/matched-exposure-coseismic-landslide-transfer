@@ -14,6 +14,13 @@ reports.
 - `q2_x3_bootstrap/`: component and merged-block X3 intervals.
 - `q2_x3_loro_tiles/` and `q2_x3_loro_bootstrap/`: six-region LORO
   extension, retained as exploratory evidence.
+- `e3_four_backbone_raw/`: per-run metrics for the four-backbone replication of
+  the matched-exposure contrast.
+- `calibration_e2/`: multi-seed calibration diagnostics.
+- `scale_experiments/`: the two negative controls — source-domain coarsening
+  (`source_coarsening.csv`, k = 1/4/16) and evaluation-scale sweep
+  (`evaluation_scale_sweep.csv`, s = 1/2/4/8/16). See the README in that
+  directory for how the two differ.
 
 No image pixels or checkpoint weights are stored in this directory.
 

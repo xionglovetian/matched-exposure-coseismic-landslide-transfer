@@ -212,3 +212,36 @@ checkpoints, that is, either the weights or the compute needed to retrain them.
 `requirements.txt` does pin both (`segmentation-models-pytorch==0.5.0`,
 `opencv-python-headless==5.0.0.93`), so use `requirements.txt` for a clean
 environment.
+
+## 10. Scale negative controls (2026-10-17)
+
+Two controls answer the objection that the region effect is a resolution
+asymmetry between the source and target domains. Unlike Section 9 these need
+imagery and training, so only their outputs are regenerated from the package.
+
+### Source-domain coarsening
+
+The pooled source domain is resampled to a common effective ground sampling
+distance before tiling, at k = 1, 4 and 16 relative to the native chips:
+
+```powershell
+python scripts/scale_experiments/coarsen_source.py --k 4
+python scripts/scale_experiments/cache_input_128.py --k 4
+python scripts/scale_experiments/train_coarsened_sources.py --k 4
+python scripts/scale_experiments/evaluate_source_coarsening.py
+```
+
+### Evaluation-scale sweep
+
+The held-out chip resolution is varied at s = 1, 2, 4, 8 and 16 for both model
+families:
+
+```powershell
+python scripts/scale_experiments/evaluate_scale_sweep.py
+```
+
+Results land in `metrics/scale_experiments/source_coarsening.csv` (nine runs)
+and `metrics/scale_experiments/evaluation_scale_sweep.csv` (thirty runs). Both
+controls reduce macro IoU monotonically as the mismatch grows; the sweep also
+shows that only Lombok gains at s = 2. Neither changes the sign or the ranking
+of the region effect reported in the manuscript.

@@ -1,5 +1,28 @@
 # Changelog
 
+## 2026-10-17 - scale negative controls
+
+Added the two negative controls that the revision asks about, so that they are
+resolvable from the archived tag rather than only from local runs.
+
+- Source-domain coarsening. The pooled source domain was resampled to a common
+  effective ground sampling distance before tiling, at k = 1, 4 and 16 relative
+  to the native chips. Nine runs (three k values x three seeds) under
+  `scripts/scale_experiments/`, results in
+  `metrics/scale_experiments/source_coarsening.csv`.
+- Evaluation-scale sweep. The held-out chip resolution was varied at
+  s = 1, 2, 4, 8 and 16 for both model families. Thirty runs, results in
+  `metrics/scale_experiments/evaluation_scale_sweep.csv`.
+- Both controls move macro IoU monotonically downward as the mismatch grows, and
+  neither rescues the region effect; they are archived as evidence that the
+  headline contrast is not an artefact of a resolution asymmetry between source
+  and target domains.
+- `metrics/README.md` now indexes `scale_experiments/`, `e3_four_backbone_raw/`
+  and `calibration_e2/`.
+- `.zenodo.json` now self-references this repository (it previously named the
+  retired two-architecture repository) and its description covers the scale
+  controls.
+
 ## 2026-10-15 - four-backbone revision release
 
 Repository published as

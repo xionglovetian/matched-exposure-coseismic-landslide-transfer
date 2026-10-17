@@ -21,8 +21,8 @@ contact:
     given-names: Juan
     email: mengjuan@cidp.edu.cn
 license: MIT
-version: "repro-20261015-r7"
-date-released: "2026-10-15"
+version: "repro-20261017-r8"
+date-released: "2026-10-17"
 repository-code: "https://github.com/xionglovetian/matched-exposure-coseismic-landslide-transfer"
 keywords:
   - coseismic landslides
