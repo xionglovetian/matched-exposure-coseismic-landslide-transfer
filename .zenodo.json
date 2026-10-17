@@ -21,8 +21,8 @@
   "related_identifiers": [
     {
       "relation": "references",
-      "identifier": "https://github.com/xionglovetian/matched-exposure-coseismic-landslide-transfer",
-      "resource_type": "software"
+      "identifier": "https://doi.org/10.5281/zenodo.10294997",
+      "resource_type": "dataset"
     }
   ],
   "notes": "This record archives a tagged release of the repository. The tag name is recorded in the version field of the corresponding release."
